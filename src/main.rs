@@ -9,7 +9,7 @@ fn main() -> std::io::Result<()> {
         match socket.recv_from(&mut buf) {
             Ok(_) => {
                 println!("Recv pong from breed.");
-                open::that("http://192.168.1.1").unwrap();unwrap();
+                open::that("http://192.168.1.1").unwrap();
                 return Ok(());
             }
             Err(ref e) if e.kind() == std::io::ErrorKind::WouldBlock => {
