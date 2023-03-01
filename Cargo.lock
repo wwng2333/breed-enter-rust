@@ -5,3 +5,12 @@ version = 3
 [[package]]
 name = "breedenter-rust"
 version = "0.1.0"
+dependencies = [
+ "press-btn-continue",
+]
+
+[[package]]
+name = "press-btn-continue"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4d3671a77f3e20b58a996eb7ea9d3ede67701af189c41ddae118b7c1fe38f160"

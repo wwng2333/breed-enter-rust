@@ -6,3 +6,4 @@ authors = ["wwng <wwng@2333.me>"]
 description = "A rust version of breedenter."
 
 [dependencies]
+press-btn-continue = "0.1.1"
