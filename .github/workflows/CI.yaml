@@ -6,7 +6,7 @@ on:
     branches:
       - master
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 jobs:
   style:
@@ -30,7 +30,6 @@ jobs:
           command: fmt
           args: --all -- --check
 
-
   test:
     name: Test
     needs: [style]
@@ -38,7 +37,7 @@ jobs:
 
     strategy:
       matrix:
-        build: [stable, beta, nightly]
+        build: [stable]
         include:
           - build: beta
             rust: beta
@@ -80,9 +79,18 @@ jobs:
     needs: [test]
     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
-    strategy: 
+    strategy:
       matrix:
-        target: [ i686-unknown-linux-musl,x86_64-unknown-linux-musl,aarch64-apple-darwin,x86_64-apple-darwin,x86_64-pc-windows-gnu,x86_64-pc-windows-msvc,i686-pc-windows-msvc]
+        target:
+          [
+            i686-unknown-linux-musl,
+            x86_64-unknown-linux-musl,
+            aarch64-apple-darwin,
+            x86_64-apple-darwin,
+            x86_64-pc-windows-gnu,
+            x86_64-pc-windows-msvc,
+            i686-pc-windows-msvc,
+          ]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -112,6 +120,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         # TODO: if any of the build step fails, the release should be deleted.
         with:
-            files: 'testmest*'
+          files: "testmest*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
