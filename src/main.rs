@@ -12,11 +12,10 @@ fn main() -> std::io::Result<()> {
                 open::that("http://192.168.1.1").unwrap();
                 return Ok(());
             }
-            Err(ref e) if e.kind() == std::io::ErrorKind::WouldBlock => {
+            Err(_) => {
                 std::thread::sleep(std::time::Duration::from_secs_f32(0.5));
                 continue;
             }
-            Err(_) => {}
         }
     }
 }
