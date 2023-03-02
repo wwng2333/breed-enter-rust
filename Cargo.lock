@@ -7,7 +7,6 @@ name = "breedenter-rust"
 version = "0.1.5"
 dependencies = [
  "open",
- "press-btn-continue",
 ]
 
 [[package]]
@@ -25,12 +24,6 @@ name = "pathdiff"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8835116a5c179084a830efb3adc117ab007512b535bc1a21c991d3b32a6b44dd"
-
-[[package]]
-name = "press-btn-continue"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4d3671a77f3e20b58a996eb7ea9d3ede67701af189c41ddae118b7c1fe38f160"
 
 [[package]]
 name = "windows-sys"
