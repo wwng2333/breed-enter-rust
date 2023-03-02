@@ -1,5 +1,10 @@
+use std::io;
+use std::io::Read;
+use std::net::UdpSocket;
+use std::thread;
+use std::time::Duration;
 fn main() -> std::io::Result<()> {
-    let socket = std::net::UdpSocket::bind("0.0.0.0:37540")?;
+    let socket = UdpSocket::bind("0.0.0.0:37540")?;
     socket.set_broadcast(true)?;
     socket.set_nonblocking(true).unwrap();
     println!("Sending abort command to breed per 500ms.");
@@ -9,11 +14,14 @@ fn main() -> std::io::Result<()> {
         match socket.recv_from(&mut buf) {
             Ok(_) => {
                 println!("Received pong from breed, starting browser.");
-                open::that("http://192.168.1.1").unwrap();press_btn_continue::wait("Press any key to continue...").unwrap();
+                open::that("http://192.168.1.1").unwrap();
+                println!("Press ENTER to continue...");
+                let buffer = &mut [0u8];
+                io::stdin().read_exact(buffer).unwrap();
                 return Ok(());
             }
             Err(_) => {
-                std::thread::sleep(std::time::Duration::from_secs_f32(0.5));
+                thread::sleep(Duration::from_secs_f32(0.5));
                 continue;
             }
         }
