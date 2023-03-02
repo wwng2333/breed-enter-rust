@@ -1,6 +1,6 @@
 [package]
 name = "breedenter-rust"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 authors = ["wwng <wwng@2333.me>"]
 description = "A rust version of breedenter."
