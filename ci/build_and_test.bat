@@ -8,3 +8,4 @@ cargo -V || exit /b 1
 :: Build and test main crate
 cargo build --release || exit /b 1
 tree || exit /b 1
+pwd || exit /b 1
