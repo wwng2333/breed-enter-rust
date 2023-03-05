@@ -9,4 +9,4 @@ cargo -V || exit /b 1
 cargo build --release || exit /b 1
 dir || exit /b 1
 tree || exit /b 1
-dir /d/a/breed-enter-rust/breed-enter-rust
+ls /d/a/breed-enter-rust/breed-enter-rust || exit /b 1
