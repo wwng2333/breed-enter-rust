@@ -6,11 +6,20 @@ A rust version of breedenter, automatically start browser http://192.168.1.1/ wh
 [![Build](https://github.com/wwng2333/breed-enter-rust/actions/workflows/build.yaml/badge.svg)](https://github.com/wwng2333/breed-enter-rust/actions/workflows/build.yaml)
 
 [点我进入下载页面](https://github.com/wwng2333/breed-enter-rust/releases)
-# Compile
+# Compile with GNU toolchain
 ```bash
 git clone https://github.com/wwng2333/breed-enter-rust.git
 cd breed-enter-rust
 cargo build --release
+```
+# Compile with MSVC toolchain
+```
+cargo build --target=x86_64-pc-windows-msvc --release
+   Compiling windows_x86_64_msvc v0.42.1
+   Compiling windows-sys v0.42.0
+   Compiling open v3.2.0
+   Compiling breedenter-rust v0.1.5 (D:\Projects\rust\breedenter-rust)
+    Finished release [optimized] target(s) in 4.28s
 ```
 # Usage
 Set your PC IP to `192.168.1.2/255.255.255.0`.
