@@ -8,3 +8,4 @@ cargo -V || exit /b 1
 :: Build and test main crate
 cargo build --locked || exit /b 1
 cargo test || exit /b 1
+tree || exit /b 1
