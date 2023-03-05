@@ -1,4 +1,5 @@
-name: windows
+name: Build for Windows MSVC
+
 on:
   push:
     branches:
