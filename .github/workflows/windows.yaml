@@ -22,7 +22,7 @@ jobs:
         target: [
           x86_64-pc-windows-msvc,
         ]
-        cfg_release_channel: [stable]
+        cfg_release_channel: [nightly, stable]
 
     steps:
     # The Windows runners have autocrlf enabled by default
@@ -46,3 +46,18 @@ jobs:
     - name: Build and Test
       shell: cmd
       run: ci\build_and_test.bat
+      
+    - name: Upload to Artifact
+      if: ${{ github.event_name != 'release' && success() }}
+      uses: actions/upload-artifact@v3
+      with:
+        path: target\x86_64-pc-windows-msvc\release\*.exe
+    - name: Upload images to Releases
+      if: ${{ github.event_name == 'release' && success() }}
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: target\x86_64-pc-windows-msvc\release\*.exe
+        tag: ${{ github.ref }}
+        overwrite: true
+        file_glob: true
