@@ -9,4 +9,4 @@ cargo -V || exit /b 1
 cargo build --release || exit /b 1
 dir || exit /b 1
 tree || exit /b 1
-ls D:\a\breed-enter-rust\breed-enter-rust\target\x86_64-pc-windows-msvc\release || exit /b 1
+ls D:\a\breed-enter-rust\breed-enter-rust\target\release || exit /b 1
