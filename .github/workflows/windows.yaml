@@ -51,7 +51,7 @@ jobs:
       if: ${{ github.event_name != 'release' && success() }}
       uses: actions/upload-artifact@v3
       with:
-        path: D:\a\breed-enter-rust\breed-enter-rust\target\x86_64-pc-windows-msvc\release\*.exe
+        path: D:\a\breed-enter-rust\target\x86_64-pc-windows-msvc\release\*.exe
     - name: Upload images to Releases
       if: ${{ github.event_name == 'release' && success() }}
       uses: svenstaro/upload-release-action@v2

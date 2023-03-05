@@ -7,5 +7,6 @@ cargo -V || exit /b 1
 
 :: Build and test main crate
 cargo build --release || exit /b 1
+dir || exit /b 1
 tree || exit /b 1
-pwd || exit /b 1
+dir /d/a/breed-enter-rust/breed-enter-rust
