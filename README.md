@@ -3,7 +3,8 @@ A rust version of breedenter, automatically start browser http://192.168.1.1/ wh
 
 ![](https://img.shields.io/badge/license-MIT-000000.svg)
 ![](https://img.shields.io/badge/language-rust-brightgreen)
-[![Build](https://github.com/wwng2333/breed-enter-rust/actions/workflows/build.yaml/badge.svg)](https://github.com/wwng2333/breed-enter-rust/actions/workflows/build.yaml)
+[![Build](https://github.com/wwng2333/breed-enter-rust/actions/workflows/build-gnu.yaml/badge.svg)](https://github.com/wwng2333/breed-enter-rust/actions/workflows/build-gnu.yaml)
+[![Build](https://github.com/wwng2333/breed-enter-rust/actions/workflows/build-msvc.yaml/badge.svg)](https://github.com/wwng2333/breed-enter-rust/actions/workflows/build-msvc.yaml)
 
 [点我进入下载页面](https://github.com/wwng2333/breed-enter-rust/releases)
 # Compile with GNU toolchain
