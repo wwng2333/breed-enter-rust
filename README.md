@@ -27,13 +27,12 @@ Set your PC IP to `192.168.1.2/255.255.255.0`.
 
 Download it, and execute it.
 ```
-[root@crazy breed-enter-rust]# cargo run --package breedenter-rust
+$ cargo run
    Compiling breedenter-rust v0.1.5 (D:\Projects\rust\breedenter-rust)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.60s
+    Finished dev [unoptimized + debuginfo] target(s) in 0.37s
      Running `target\debug\breedenter-rust.exe`
+Local IP: 192.168.123.5
 Sending abort command to breed per 500ms.
-Received pong from breed, starting browser.
-Press any key to continue...
 ```
 
 # License
